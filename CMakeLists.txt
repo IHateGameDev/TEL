@@ -9,18 +9,23 @@ set(CMAKE_C_STANDARD_REQUIRED ON)
 
 include_directories(${CMAKE_SOURCE_DIR})
 
-if(EXIST ${CMAKE_SOURCE_DIR}/APIMacros)
+if(EXISTS ${CMAKE_SOURCE_DIR}/APIMacros)
   include_directories(${CMAKE_SOURCE_DIR}/APIMacros)
 endif()
 
-file(GLOB temSource
+if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+  set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -g")
+endif()
+
+
+file(GLOB temSources
   ${CMAKE_SOURCE_DIR}/src/*.c
 )
 
 if(BUILD_AS_SHARED)
-  add_library(tem SHARED temSource)
+  add_library(tem SHARED ${temSources})
 else()
-  add_library(tem STATIC temSource)
+  add_library(tem STATIC ${temSources})
 endif()
 
 if(BUILD_TESTS)

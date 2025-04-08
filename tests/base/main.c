@@ -3,12 +3,15 @@
 #include "wrapper.h"
 
 int main(void) {
-  TEMExtension* printExtension = temExtensionLoad("./printExtension", "setup");
+  TEMExtension* baseExtension = temExtensionLoad("./base.te", "setup", sizeof(BaseExtensionInfo));
+
+  BaseExtensionInfo* info = (BaseExtensionInfo*)baseExtension->info;
   
-  BaseExtensionInfo* info = printExtension->info;
+  if(info)
+    printf("%d, %d, %d\n", info->vMajor, info->vMinor, info->vPatch);
+  else
+    puts("unknown error");
 
-  printf("%d, %d, %d\n", info->vMajor, info->vMinor, info->vPatch);
-
-  temExtensionUnload(printExtension, "");
+  temExtensionUnload(baseExtension, "");
   return 0;
 }
