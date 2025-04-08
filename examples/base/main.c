@@ -7,10 +7,7 @@ int main(void) {
 
   BaseExtensionInfo* info = (BaseExtensionInfo*)baseExtension->info;
   
-  if(info)
-    printf("%d, %d, %d\n", info->vMajor, info->vMinor, info->vPatch);
-  else
-    puts("unknown error");
+  printf("%d, %d, %d\n", info->vMajor, info->vMinor, info->vPatch);
 
   temExtensionUnload(baseExtension, "");
   return 0;
