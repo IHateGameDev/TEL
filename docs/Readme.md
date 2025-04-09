@@ -1,5 +1,8 @@
 # TEM - Tiny Extension Manager
-![Logo](./logo.webp)
+<div align="center">
+  <img src="./logo.webp" alt="Logo" />
+</div>
+
 ### Features
 - Fast create extension system on shared libraries
 - Easy and tiny API
