@@ -6,8 +6,8 @@
 
 <table style="width: 100%;">
   <tr>
-    <td style="text-align: center;"> ![Logo](./logo.webp) </td>
-    <td style="text-align: center;"> ![NumLogo](./nlogo.webp) </td>
+    <td style="text-align: center;"> <img src="./logo.webp" alt="Logo" /> </td>
+    <td style="text-align: center;"> <img src="./nlogo.webp" alt="NumLogo" /> </td>
   </tr>
 </table>
 
