@@ -4,12 +4,10 @@
 
 </div>
 
-<table style="width: 100%;">
-  <tr>
-    <td style="text-align: center;"> <img src="./logo.webp" alt="Logo" /> </td>
-    <td style="text-align: center;"> <img src="./nlogo.webp" alt="NumLogo" /> </td>
-  </tr>
-</table>
+<div align="justify">
+  <img align="center" src="./logo.webp" alt="Logo" />
+  <img align="center" src="./nlogo.webp" alt="NumLogo" /> 
+</div>
 
 ### Features
 - Quick creation of extension system based on shared libraries
