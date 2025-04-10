@@ -1,11 +1,35 @@
-# TEM - Tiny Extension Manager
+<div align="center">
+
+# TEM - create your extensible application
+
+</div>
+
 <div align="center">
   <img src="./logo.webp" alt="Logo" />
+  <img src="./nlogo.webp" alt="NumLogo" />
 </div>
 
 ### Features
-- Fast create extension system on shared libraries
+- Quick creation of extension system based on shared libraries
 - Easy and tiny API
-- Few depends(std c lib / +APIMacro, dlfcn.h / windows.h)
+- Few depends:
+  - std c lib,
+  - [APIMacros](https://github.com/IHateGameDev/APIMacros), without use "APIMacros/override"
+    - dlfcn.h / windows.h
 
-**APIMacro** is a header that can override std c lib and adds a couple of features, you can remove it after building, but it's also likely to be needed when developing the extensions themselves if you used it in the shell for the extensions.
+### Build
+Install and standard build commands:
+```bash
+git clone https://github.com/IHateGameDev/TEM.git
+cd TEM
+mkdir build
+cd build
+cmake -DCMAKE_BUILD_TYPE=Release .. -g Ninja
+ninja
+
+ninja install
+```
+You can safely use `make` instead of `ninja`.
+
+### Guidelines
+See the [Guidelines.md](./Guidelines.md) for implementing TEM in a project and standard specification for creating extensions.
