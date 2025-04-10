@@ -4,7 +4,7 @@
 
 </div>
 
-<div align="center">
+<div align="justify">
   <img src="./logo.webp" alt="Logo" />
   <img src="./nlogo.webp" alt="NumLogo" />
 </div>
