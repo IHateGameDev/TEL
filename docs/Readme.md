@@ -4,10 +4,12 @@
 
 </div>
 
-<div align="justify">
-  <img src="./logo.webp" alt="Logo" />
-  <img src="./nlogo.webp" alt="NumLogo" />
-</div>
+<table style="width: 100%;">
+  <tr>
+    <td style="text-align: center;"> ![Logo](./logo.webp) </td>
+    <td style="text-align: center;"> ![NumLogo](./nlogo.webp) </td>
+  </tr>
+</table>
 
 ### Features
 - Quick creation of extension system based on shared libraries
