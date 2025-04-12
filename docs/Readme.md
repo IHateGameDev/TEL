@@ -56,7 +56,7 @@ make install
 
 ## Contributing
 
-If you want to contribute see [CONTRIBUTING.md](./CONTRIBUTING.md).
+If you want to contribute see [Contributing.md](./Contributing.md).
 
 ## Guidelines
 
