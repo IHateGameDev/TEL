@@ -3,11 +3,12 @@
 PROJECT_NAME           = "TEM"
 PROJECT_BRIEF          = "TEM - create extensible applications"
 PROJECT_LOGO           = docs/logo.webp
-OUTPUT_DIRECTORY       = build/docs
 TAB_SIZE               = 2
+OUTPUT_DIRECTORY       = build/docs
 OPTIMIZE_OUTPUT_FOR_C  = YES
 MARKDOWN_SUPPORT       = YES
-INPUT                  = TEM/ docs/*.md
+INPUT                  = TEM/ \
+                         docs/
+EXTRACT_ALL            = YES
 GENERATE_LATEX         = NO
-OPTIMIZE_OUTPUT        = YES
-USE_MDFILE_AS_MAINPAGE = YES
+USE_MDFILE_AS_MAINPAGE = docs/Readme.md

@@ -23,7 +23,7 @@ typedef struct {
   void* library;  /**< Pointer to a shared library representing the extension. */
 } TEMExtension;
 
-/*
+/**
  * @brief Function that loads the extension.
  *
  * The function that loads the extension,

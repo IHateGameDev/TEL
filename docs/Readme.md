@@ -17,17 +17,25 @@
     - dlfcn.h / windows.h
 
 ## Build
+### CMake options
+| **Option**     | **Description**                         | **Default value** |
+| :------------- | :-------------------------------------: | ----------------: |
+| BUILD_STATIC   | Add static library to targets           | ON                |
+| BUILD_SHARED   | Add shared library to targets           | OFF               |
+| BUILD_EXAMPLES | Enable building examples                | OFF               |
+| EXAMPLES_USE   | Type of library use on compile examples | "Static"          |
+| BUILD_DOC      | Enable building doxygen doc             | OFF               |
+
 Default install and build commands:
 ```bash
 git clone https://github.com/IHateGameDev/TEM.git
 cd TEM
 mkdir build
 cd build
-cmake -DCMAKE_BUILD_TYPE=Release .. -g Ninja # -DBUILD_DOC=ON (optional)
+cmake -DCMAKE_BUILD_TYPE=Release .. -g Ninja
 ninja
 
 ninja install
-#ninja doc (optional)
 ```
 
 You can safely use `make` instead of `ninja`:
@@ -39,7 +47,6 @@ cmake -DCMAKE_BUILD_TYPE=Release ..
 make
 
 make install
-#make doc (optional)
 ```
 
 ## Guidelines
