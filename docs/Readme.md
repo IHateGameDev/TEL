@@ -9,6 +9,7 @@
 </div>
 
 ## Features
+
 - Quick creation of extension system based on shared libraries
 - Easy and tiny API
 - Few depends:
@@ -17,7 +18,9 @@
     - dlfcn.h / windows.h
 
 ## Build
+
 ### CMake options
+
 | **Option**     | **Description**                         | **Default value** |
 | :------------- | :-------------------------------------: | ----------------: |
 | BUILD_STATIC   | Add static library to targets           | ON                |
@@ -25,6 +28,8 @@
 | BUILD_EXAMPLES | Enable building examples                | OFF               |
 | EXAMPLES_USE   | Type of library use on compile examples | "Static"          |
 | BUILD_DOC      | Enable building doxygen doc             | OFF               |
+
+### Build with CMake
 
 Default install and build commands:
 ```bash
@@ -49,5 +54,10 @@ make
 make install
 ```
 
+## Contributing
+
+If you want to contribute see [CONTRIBUTING.md](./CONTRIBUTING.md).
+
 ## Guidelines
+
 See the [Guidelines.md](./Guidelines.md) for implementing TEM in a project and standard specification for creating extensions.

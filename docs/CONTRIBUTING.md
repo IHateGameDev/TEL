@@ -25,13 +25,14 @@ Thank you for considering contributing to our project! We appreciate your help.
 - Clear and understandable name of the added / deleted / changed / fixed
 - Use [actions](#actionsTable) in name (optional but desirable)
 
-<a name="actionsTable" />
+<a name="actionsTable">Actions table: </a>
 
 | Action | Description (Use if) | Example |
 | ------------------- | ----------------------------------------------------------------------------------- | ------------------- |
 | Add:                | Add new feature(s) or file(s)                                                       | "Add: tests/load.c" |
 | Remove:             | Remove feature(s) or file(s)				                                        | "Remove: hdrtest"   |
 | Change / Review:    | Change feature(s) or file(s), review code and solutions                             | "Review: project structure" |
+| Fix / HotFix:       | Apply fix or hotfix to feature(s) or file(s)                                        | "Fix: actions table in CONTRIBUTING.md" |
 | Preparation: (List) | "Preparation" use on "preparation/X.X.X" branch for releases. List is other actions | "Preparation: Add: doc for queue.h" |
 | Stable:             | Stable version for main branch                                                      | "Stable: v0.1.0" |
 
