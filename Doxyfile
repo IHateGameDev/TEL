@@ -2,7 +2,9 @@
 
 PROJECT_NAME           = "TEM"
 PROJECT_BRIEF          = "TEM - create extensible applications"
-PROJECT_LOGO           = docs/logo.webp
+PROJECT_LOGO           = docs/DocLogo.webp
+PROJECT_ICON           = docs/Icon.webp
+
 TAB_SIZE               = 2
 OUTPUT_DIRECTORY       = build/docs
 OPTIMIZE_OUTPUT_FOR_C  = YES
