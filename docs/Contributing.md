@@ -18,7 +18,7 @@ Thank you for considering contributing to our project! We appreciate your help.
 - Use `API` from [APIMacros](https://github.com/IHateGameDev/APIMacros)/api.h before public functions.
 - Use library prefix in public functions.
 - `prefixActionName` naming for init / create / new functions: `API info* libNewInfo()`.
-- `prefixNameAction` naming for other functions: `API void libInfoPushInt()` but if the action is more important you can use `prefixActionStruct` or `prefixAction`..
+- `prefixNameAction` naming for other functions: `API void libInfoPushInt()` but if the action is more important you can use `prefixActionStruct` or `prefixAction`.
 
 ## Commit standards
 
@@ -46,7 +46,7 @@ If you find a bug, please create a new issue in the repository with a descriptio
 
 ## License
 
-This project is licensed under the MIT License. Please see the [LICENSE](../License) file for more information.
+This project is licensed under the MIT License. Please see the [License](../License) file for more information.
 
 ## Contact Information
 
