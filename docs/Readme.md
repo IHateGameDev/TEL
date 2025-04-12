@@ -5,7 +5,7 @@
 </div>
 
 <div align="center">
-  <img align="center" src="./Logo.webp" alt="Logo" width="600"/>
+  <img align="center" src="./Logo.webp" alt="Logo" style="scale: 6"/>
 </div>
 
 ## Features
