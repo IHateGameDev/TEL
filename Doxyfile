@@ -1,0 +1,13 @@
+# Doxyfile 1.13.2
+
+PROJECT_NAME           = "TEM"
+PROJECT_BRIEF          = "TEM - create extensible applications"
+PROJECT_LOGO           = docs/logo.webp
+OUTPUT_DIRECTORY       = build/docs
+TAB_SIZE               = 2
+OPTIMIZE_OUTPUT_FOR_C  = YES
+MARKDOWN_SUPPORT       = YES
+INPUT                  = TEM/ docs/*.md
+GENERATE_LATEX         = NO
+OPTIMIZE_OUTPUT        = YES
+USE_MDFILE_AS_MAINPAGE = YES

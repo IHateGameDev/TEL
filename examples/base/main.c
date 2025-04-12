@@ -1,14 +1,14 @@
+#include "ExtensionInfo.h"
 #include <TEM/Extension.h>
 #include <stdio.h>
-#include "wrapper.h"
 
 int main(void) {
-  TEMExtension* baseExtension = temExtensionLoad("./base.te", "setup", sizeof(BaseExtensionInfo));
+  TEMExtension* extension = temExtensionLoad("./extensions/printHello.te", "setup", sizeof(BaseExtensionInfo));
 
-  BaseExtensionInfo* info = (BaseExtensionInfo*)baseExtension->info;
+  BaseExtensionInfo* info = (BaseExtensionInfo*)extension->info;
   
   printf("%d, %d, %d\n", info->vMajor, info->vMinor, info->vPatch);
 
-  temExtensionUnload(baseExtension, "");
+  temExtensionUnload(extension, "");
   return 0;
 }

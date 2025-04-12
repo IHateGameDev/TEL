@@ -1,5 +1,5 @@
-#ifndef BASE_WRAPPER_H
-#define BASE_WRAPPER_H
+#ifndef BASE_EXTENSION_INFO_H
+#define BASE_EXTENSION_INFO_H
 
 typedef struct {
   unsigned char vMajor;
@@ -7,4 +7,4 @@ typedef struct {
   unsigned char vPatch;
 } BaseExtensionInfo;
 
-#endif // !BASE_WRAPPER_H
+#endif // !BASE_EXTENSION_INFO_H

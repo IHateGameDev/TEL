@@ -6,10 +6,9 @@
 
 <div align="center">
   <img align="center" src="./logo.webp" alt="Logo" />
-  <img align="center" src="./nlogo.webp" alt="NumLogo" /> 
 </div>
 
-### Features
+## Features
 - Quick creation of extension system based on shared libraries
 - Easy and tiny API
 - Few depends:
@@ -17,19 +16,31 @@
   - [APIMacros](https://github.com/IHateGameDev/APIMacros), without use "APIMacros/override"
     - dlfcn.h / windows.h
 
-### Build
-Install and standard build commands:
+## Build
+Default install and build commands:
 ```bash
 git clone https://github.com/IHateGameDev/TEM.git
 cd TEM
 mkdir build
 cd build
-cmake -DCMAKE_BUILD_TYPE=Release .. -g Ninja
+cmake -DCMAKE_BUILD_TYPE=Release .. -g Ninja # -DBUILD_DOC=ON (optional)
 ninja
 
 ninja install
+#ninja doc (optional)
 ```
-You can safely use `make` instead of `ninja`.
 
-### Guidelines
+You can safely use `make` instead of `ninja`:
+```bash
+git clone https://github.com/IHAteGameDev/TEM.git
+cd TEM
+mkdir build cd build
+cmake -DCMAKE_BUILD_TYPE=Release ..
+make
+
+make install
+#make doc (optional)
+```
+
+## Guidelines
 See the [Guidelines.md](./Guidelines.md) for implementing TEM in a project and standard specification for creating extensions.

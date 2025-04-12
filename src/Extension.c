@@ -10,7 +10,7 @@ typedef void(*TEMCallback)(void*);
 static inline void processFunction(TEMExtension* extension, const char* functionName) {
   TEMCallback callback = (TEMCallback)API_GET_LIB_FUNC((API_LIBRARY)extension->library, functionName);
   if (!callback) {
-    printf("[TEM] Code of error on get function '%s': %d\n", functionName, API_GET_LIB_ERROR());
+    printf("[TEM] Code of error on get function \"%s\": %s\n", functionName, API_GET_LIB_ERROR());
     return;
   }
 
@@ -28,7 +28,7 @@ API TEMExtension* temExtensionLoad(const char* path, const char* setupFunctionNa
   out->library = (void*)API_LOAD_LIBRARY(path);
 
   if (!out->library) {
-    printf("[TEM] Code of error on extension load: %d\n", API_GET_LIB_ERROR());
+    printf("[TEM] Code of error on extension load: %s\n", API_GET_LIB_ERROR());
     free(out);
     return nullptr;
   }
