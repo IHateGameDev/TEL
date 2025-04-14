@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TEM: Contributing to the Project</title>
+<title>TEM: TEM</title>
 <link rel="icon" href="Icon.webp" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -79,7 +79,7 @@ $(function() { codefold.init(0); });
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('md_Contributing.html',''); initResizable(true); });
+$(function(){initNavTree('index.html',''); initResizable(true); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -105,68 +105,69 @@ $(function(){initNavTree('md_Contributing.html',''); initResizable(true); });
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Contributing to the Project</div></div>
+  <div class="headertitle"><div class="title">TEM </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md12"></a></p>
-<p>Thank you for considering contributing to our project! We appreciate your help.</p>
-<h1><a class="anchor" id="autotoc_md13"></a>
-How to Contribute</h1>
-<ol type="1">
-<li>Fork the repository.</li>
-<li>Clone the repository: <code>git clone <a href="https://github.com/YourName/TEM.git">https://github.com/YourName/TEM.git</a></code>.</li>
-<li>Create a new branch: <code>git checkout -b branch-name</code>.</li>
-<li>Make your changes and commit them: <code>git add . &amp;&amp; git commit -m "Add: feature"</code>.</li>
-<li>Push changes in your repository: <code>git push origin branch-name</code>.</li>
-<li>Pull request.</li>
-</ol>
-<h1><a class="anchor" id="autotoc_md14"></a>
-Coding Standards</h1>
+<div class="textblock"><p><a class="anchor" id="md_Readme"></a> </p><div align="center"></div><div align="center"></div><h1><a class="anchor" id="autotoc_md24"></a>
+<div align="center">TEM - create your extensible application</div></h1>
+<div align="center"></div><div align="center"></div><div align="center"></div><div align="center"><img src="https://img.shields.io/badge/Release-v0.1.0-blue" alt="Static Badge" class="inline"/> <img src="https://img.shields.io/badge/Build%20status-passed-green" alt="Static Badge" class="inline"/> <a href="../License"><img src="https://img.shields.io/badge/License-MIT-orange" alt="Static Badge" class="inline"/></a> <img src="https://img.shields.io/badge/Documentation-page-darkcyan" alt="Static Badge" class="inline"/></div><div align="center"></div><div align="center"></div><div align="center"><img src="./Logo.webp" alt="Logo" align="center" class="inline"/></div><div align="center"></div><h2><a class="anchor" id="autotoc_md25"></a>
+Features</h2>
 <ul>
-<li>Use <b>2</b> spaces for indentation.</li>
-<li>Name variables in <code>camelCase</code>.</li>
-<li>Use <b><code>API</code></b> from <a href="https://github.com/IHateGameDev/APIMacros">APIMacros</a>/api.h before public functions.</li>
-<li>Use library prefix in public functions.</li>
-<li><code>prefixActionStruct</code> naming for init / create / new functions: <code>API info* libNewInfo()</code>.</li>
-<li><code>prefixNameStruct</code> naming for other functions: <code>API void libInfoPushInt()</code> but if the action is more important you can use <code>prefixActionStruct</code> or <code>prefixAction</code>.</li>
+<li>Quick creation of extension system based on shared libraries</li>
+<li>Easy and tiny API</li>
+<li>Few depends:<ul>
+<li>std c lib,</li>
+<li><a href="https://github.com/IHateGameDev/APIMacros">APIMacros</a>, without use "APIMacros/override"<ul>
+<li>dlfcn.h / windows.h</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md15"></a>
-Commit standards</h1>
-<ul>
-<li>Clear and understandable name of the added / deleted / changed / fixed</li>
-<li>Use <a class="el" href="#actionsTable">actions</a> in name (optional but desirable)</li>
+</li>
 </ul>
-<p><a class="anchor" id="actionsTable"></a>Actions table: </p>
+</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md26"></a>
+Build</h2>
+<h3><a class="anchor" id="autotoc_md27"></a>
+CMake options</h3>
 <table class="markdownTable">
 <tr class="markdownTableHead">
-<th class="markdownTableHeadNone">Action   </th><th class="markdownTableHeadNone">Description (Use if)   </th><th class="markdownTableHeadNone">Example    </th></tr>
+<th class="markdownTableHeadLeft"><b>Option</b>   </th><th class="markdownTableHeadCenter"><b>Description</b>   </th><th class="markdownTableHeadRight"><b>Default value</b>    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Add:   </td><td class="markdownTableBodyNone">Add new feature(s) or file(s)   </td><td class="markdownTableBodyNone">"Add: tests/load.c"    </td></tr>
+<td class="markdownTableBodyLeft">BUILD_STATIC   </td><td class="markdownTableBodyCenter">Add static library to targets   </td><td class="markdownTableBodyRight">ON    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">Remove:   </td><td class="markdownTableBodyNone">Remove feature(s) or file(s)   </td><td class="markdownTableBodyNone">"Remove: hdrtest"    </td></tr>
+<td class="markdownTableBodyLeft">BUILD_SHARED   </td><td class="markdownTableBodyCenter">Add shared library to targets   </td><td class="markdownTableBodyRight">OFF    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Change / Review:   </td><td class="markdownTableBodyNone">Change feature(s) or file(s), review code and solutions   </td><td class="markdownTableBodyNone">"Review: project structure"    </td></tr>
+<td class="markdownTableBodyLeft">BUILD_EXAMPLES   </td><td class="markdownTableBodyCenter">Enable building examples   </td><td class="markdownTableBodyRight">OFF    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">Fix / HotFix:   </td><td class="markdownTableBodyNone">Apply fix or hotfix to feature(s) or file(s)   </td><td class="markdownTableBodyNone">"Fix: actions table in CONTRIBUTING.md"    </td></tr>
+<td class="markdownTableBodyLeft">EXAMPLES_USE   </td><td class="markdownTableBodyCenter">Type of library use on compile examples   </td><td class="markdownTableBodyRight">"Static"    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Preparation: (List)   </td><td class="markdownTableBodyNone">"Preparation" use on "preparation/X.X.X" branch for releases. List is other actions   </td><td class="markdownTableBodyNone">"Preparation: Add: doc for queue.h"    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">Stable:   </td><td class="markdownTableBodyNone">Stable version for main branch   </td><td class="markdownTableBodyNone">"Stable: v0.1.0"   </td></tr>
+<td class="markdownTableBodyLeft">BUILD_DOC   </td><td class="markdownTableBodyCenter">Enable building doxygen doc   </td><td class="markdownTableBodyRight">OFF   </td></tr>
 </table>
-<h1><a class="anchor" id="autotoc_md16"></a>
-Test your changes</h1>
-<p>Before submitting a pull request, please test your changes!</p>
-<h1><a class="anchor" id="autotoc_md17"></a>
-Reporting Issues</h1>
-<p>If you find a bug, please create a new issue in the repository with a description of the problem.</p>
-<h1><a class="anchor" id="autotoc_md18"></a>
-License</h1>
-<p>This project is licensed under the MIT License. Please see the <a href="../License">License</a> file for more information.</p>
-<h1><a class="anchor" id="autotoc_md19"></a>
-Contact Information</h1>
-<p>If you have any questions, feel free to reach out to us at <a href="#" onclick="location.href='mai'+'lto:'+'iha'+'te'+'gam'+'ed'+'ev@'+'pr'+'oto'+'n.'+'me'; return false;">ihate<span class="obfuscator">.nosp@m.</span>game<span class="obfuscator">.nosp@m.</span>dev@p<span class="obfuscator">.nosp@m.</span>roto<span class="obfuscator">.nosp@m.</span>n.me</a> or <a href="https://t.me/IHateGameDev">Telegram</a>. </p>
-</div></div><!-- contents -->
-</div><!-- PageDoc -->
+<h3><a class="anchor" id="autotoc_md28"></a>
+Build with CMake</h3>
+<p>Default install and build commands: </p><div class="fragment"><div class="line">git clone https://github.com/IHateGameDev/TEM.git</div>
+<div class="line">cd TEM</div>
+<div class="line">mkdir build</div>
+<div class="line">cd build</div>
+<div class="line">cmake -DCMAKE_BUILD_TYPE=Release .. -g Ninja</div>
+<div class="line">ninja</div>
+<div class="line"> </div>
+<div class="line">ninja install</div>
+</div><!-- fragment --><p>You can safely use <code>make</code> instead of <code>ninja</code>: </p><div class="fragment"><div class="line">git clone https://github.com/IHAteGameDev/TEM.git</div>
+<div class="line">cd TEM</div>
+<div class="line">mkdir build cd build</div>
+<div class="line">cmake -DCMAKE_BUILD_TYPE=Release ..</div>
+<div class="line">make</div>
+<div class="line"> </div>
+<div class="line">make install</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md29"></a>
+Contributing</h2>
+<p>If you want to contribute see <a class="el" href="md_Contributing.html">Contributing.md</a>.</p>
+<h2><a class="anchor" id="autotoc_md30"></a>
+Guidelines</h2>
+<p>See the <a class="el" href="md_Guidelines.html">Guidelines.md</a> for implementing TEM in a project and standard specification for creating extensions. </p>
+</div></div><!-- PageDoc -->
+<a href="doxygen_crawl.html"></a>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

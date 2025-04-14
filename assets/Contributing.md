@@ -15,7 +15,7 @@ Thank you for considering contributing to our project! We appreciate your help.
 
 - Use **2** spaces for indentation.
 - Name variables in `camelCase`.
-- Use **`API`** from [APIMacros](https://github.com/IHateGameDev/APIMacros)/api.h before public functions.
+- Use `API` from [APIMacros](https://github.com/IHateGameDev/APIMacros)/api.h before public functions.
 - Use library prefix in public functions.
 - `prefixActionStruct` naming for init / create / new functions: `API info* libNewInfo()`.
 - `prefixNameStruct` naming for other functions: `API void libInfoPushInt()` but if the action is more important you can use `prefixActionStruct` or `prefixAction`.
