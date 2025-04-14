@@ -1,4 +1,4 @@
 TEM.drawio
-.clangd
-build
-docs/docs
+/.clangd
+/build/
+/docs/Doxyfile

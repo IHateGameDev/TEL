@@ -14,7 +14,9 @@
 </div>
 
 <div align="center">
-  <img align="center" src="./Logo.webp" alt="Logo" />
+
+![Logo](./assets/Logo.webp)
+
 </div>
 
 ## Features

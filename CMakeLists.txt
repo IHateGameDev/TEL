@@ -3,24 +3,10 @@ project(TEM)
 
 ###### OPTIONS SECTION ######
 
-option(BUILD_DOC      "Build doxygen docs"    OFF)
 option(BUILD_SHARED   "Build shared library"  OFF)
 option(BUILD_EXAMPLES "Build examples"        OFF)
 option(BUILD_STATIC   "Build static library"  ON)
 option(EXAMPLES_USE   "Library type of tem"   "Static")
-
-##### DOC SECTION ######
-
-if(BUILD_DOC)
-  find_package(Doxygen REQUIRED)
-  set(DOXYGEN_IN ${CMAKE_SOURCE_DIR}/Doxyfile)
-  
-  add_custom_target(doc ALL
-    COMMAND ${DOXYGEN_EXECUTABLE} ${DOXYGEN_IN}
-    WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-    COMMENT "Generating API documentation with Doxygen"
-  VERBATIM)
-endif()
 
 ###### SETUP C SECTION ######
 
