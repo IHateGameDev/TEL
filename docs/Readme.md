@@ -15,7 +15,7 @@
 
 <div align="center">
 
-![Logo](./assets/Logo.webp)
+<img align="center" src="./Logo.webp" alt="Logo" />
 
 </div>
 
