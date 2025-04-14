@@ -8,7 +8,7 @@
 
 ![Static Badge](https://img.shields.io/badge/Release-v0.1.0-blue)
 ![Static Badge](https://img.shields.io/badge/Build%20status-passed-green)
-![Static Badge](https://img.shields.io/badge/License-MIT-orange)
+[![Static Badge](https://img.shields.io/badge/License-MIT-orange)](../License)
 ![Static Badge](https://img.shields.io/badge/Documentation-page-darkcyan)
 
 </div>
