@@ -12,7 +12,7 @@
 
 ### Install APIMacros
 
-Before install TEM you need download or get [APIMacros](https://github.com/IHateGameDev/APIMacros)
+Before buils TEM you need download or get [APIMacros](https://github.com/IHateGameDev/APIMacros).<br>
 
 Download and install(NOT RECOMMENDED):
 ```bash
@@ -29,8 +29,7 @@ sudo make install
 # ninja install
 ```
 
-Get only needed depends(RECOMMENDED):
-
+Get only needed depends(RECOMMENDED):<br>
 [Download TEM](#downloadTEM) and write this in terminal:
 
 ```bash
@@ -72,6 +71,29 @@ make install # ninja install
 
 You can configure building, see "CMake options" on [Readme.md](./Readme.md).<br>
 This steps install TEM on you PC.
+
+### Summary
+
+Example text in terminal:
+```bash
+git clone https://github.com/IHateGameDev/TEM.git
+cd TEM
+
+mkdir APIMacros
+cd APIMacros
+
+wget https://raw.githubusercontent.com/IHateGameDev/APIMacros/main/APIMacros/api.h
+wget https://raw.githubusercontent.com/IHateGameDev/APIMacros/main/APIMacros/shared.h
+
+cd ..
+mkdir build
+cd build
+
+cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_EXAMPLES=ON .. -G Ninja
+ninja
+
+ninja install
+```
 
 <a name="applicationsDevelopersGuide"></a>
 
