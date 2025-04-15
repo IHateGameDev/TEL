@@ -29,6 +29,7 @@ if [ "$srcBranch" = "docs" ]; then
     exit 1
   fi
 
+  rm -rf "docs"
   mv -f "Pages" "docs"
 
 else
@@ -38,6 +39,7 @@ else
   fi
 
   if [ "$dstBranch" = "docs" ]; then
+    rm -rf "Pages"
     mv -f "docs" "Pages"
   fi
 fi
