@@ -1,4 +1,5 @@
 # Guidelines
+
 ## Table of contents:
 - [Install guide](#installGuide)
 - [TEM implementing in project for developers](#applicationsDevelopersGuide)
@@ -13,7 +14,6 @@
 ### Install APIMacros
 
 Before buils TEM you need download or get [APIMacros](https://github.com/IHateGameDev/APIMacros).<br>
-
 Download and install(NOT RECOMMENDED):
 ```bash
 git clone https://github.com/IHateGameDev/APIMacros.git
