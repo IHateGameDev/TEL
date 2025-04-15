@@ -1,15 +1,11 @@
 var searchData=
 [
-  ['table_20of_20contents_3a_0',['Table of contents:',['../md_Guidelines.html#autotoc_md21',1,'']]],
-  ['tem_1',['TEM',['../index.html',1,'']]],
-  ['tem_20create_20your_20extensible_20application_2',['TEM - create your extensible application',['../index.html#autotoc_md24',1,'']]],
-  ['tem_20implementing_20in_20project_3',['TEM implementing in project',['../md_Guidelines.html#autotoc_md22',1,'']]],
-  ['temextension_4',['TEMExtension',['../structTEMExtension.html',1,'']]],
-  ['temextensionload_5',['temExtensionLoad',['../Extension_8h.html#a905ae62bdbc9f625aa9f059f7796ff6d',1,'Extension.h']]],
-  ['temextensionunload_6',['temExtensionUnload',['../Extension_8h.html#a4e3298998cc545827cc9ef81867701c9',1,'Extension.h']]],
-  ['temporary_20ban_7',['3. Temporary Ban',['../md_CODE__OF__CONDUCT.html#autotoc_md9',1,'']]],
-  ['test_20your_20changes_8',['Test your changes',['../md_Contributing.html#autotoc_md16',1,'']]],
-  ['the_20project_9',['Contributing to the Project',['../md_Contributing.html',1,'']]],
-  ['to_20contribute_10',['How to Contribute',['../md_Contributing.html#autotoc_md13',1,'']]],
-  ['to_20the_20project_11',['Contributing to the Project',['../md_Contributing.html',1,'']]]
+  ['scope_0',['Scope',['../md__2home_2ihgd_2IHProjects_2TEM_2Pages_2CODE__OF__CONDUCT.html#autotoc_md4',1,'']]],
+  ['security_20policy_1',['Security Policy',['../md__2home_2ihgd_2IHProjects_2TEM_2Pages_2Security.html',1,'']]],
+  ['security_2emd_2',['Security.md',['../Security_8md.html',1,'']]],
+  ['specification_3',['Standard specification',['../md__2home_2ihgd_2IHProjects_2TEM_2Pages_2Guidelines.html#autotoc_md23',1,'']]],
+  ['standard_20specification_4',['Standard specification',['../md__2home_2ihgd_2IHProjects_2TEM_2Pages_2Guidelines.html#autotoc_md23',1,'']]],
+  ['standards_5',['Standards',['../md__2home_2ihgd_2IHProjects_2TEM_2Pages_2Contributing.html#autotoc_md14',1,'Coding Standards'],['../md__2home_2ihgd_2IHProjects_2TEM_2Pages_2CODE__OF__CONDUCT.html#autotoc_md2',1,'Our Standards']]],
+  ['standards_6',['Commit standards',['../md__2home_2ihgd_2IHProjects_2TEM_2Pages_2Contributing.html#autotoc_md15',1,'']]],
+  ['supported_20versions_7',['Supported Versions',['../md__2home_2ihgd_2IHProjects_2TEM_2Pages_2Security.html#autotoc_md32',1,'']]]
 ];

@@ -1,0 +1,36 @@
+# Doxyfile 1.13.2
+
+PROJECT_NAME           = "TEM"
+PROJECT_BRIEF          = "Create your extensible application"
+PROJECT_LOGO           = Assets/Logo.webp
+PROJECT_ICON           = Assets/Icon.webp
+
+TAB_SIZE               = 2
+
+OUTPUT_DIRECTORY       = ../docs/
+HTML_OUTPUT            = .
+
+OPTIMIZE_OUTPUT_FOR_C  = YES
+
+MARKDOWN_SUPPORT       = YES
+
+INPUT                  = ../TEM/ \
+                        ../Pages/ \
+                        Assets/ \
+                        ./
+
+EXTRACT_ALL            = YES
+
+GENERATE_LATEX         = NO
+
+GENERATE_TREEVIEW      = YES
+
+FULL_SIDEBAR           = NO
+
+DISABLE_INDEX          = NO
+
+USE_MDFILE_AS_MAINPAGE = MainPage.md
+
+HTML_EXTRA_STYLESHEET  = Assets/doxygen-awesome.css \
+                        Assets/doxygen-awesome-sidebar-only.css
+

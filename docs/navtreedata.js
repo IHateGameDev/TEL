@@ -25,46 +25,38 @@
 var NAVTREE =
 [
   [ "TEM", "index.html", [
-    [ "TEM - create your extensible application", "index.html#autotoc_md24", [
-      [ "Features", "index.html#autotoc_md25", null ],
-      [ "Build", "index.html#autotoc_md26", [
-        [ "CMake options", "index.html#autotoc_md27", null ],
-        [ "Build with CMake", "index.html#autotoc_md28", null ]
+    [ "TEM - MainPage", "index.html", null ],
+    [ "Contributor Covenant Code of Conduct", "md__2home_2ihgd_2IHProjects_2TEM_2Pages_2CODE__OF__CONDUCT.html", [
+      [ "Our Pledge", "md__2home_2ihgd_2IHProjects_2TEM_2Pages_2CODE__OF__CONDUCT.html#autotoc_md1", null ],
+      [ "Our Standards", "md__2home_2ihgd_2IHProjects_2TEM_2Pages_2CODE__OF__CONDUCT.html#autotoc_md2", null ],
+      [ "Enforcement Responsibilities", "md__2home_2ihgd_2IHProjects_2TEM_2Pages_2CODE__OF__CONDUCT.html#autotoc_md3", null ],
+      [ "Scope", "md__2home_2ihgd_2IHProjects_2TEM_2Pages_2CODE__OF__CONDUCT.html#autotoc_md4", null ],
+      [ "Enforcement", "md__2home_2ihgd_2IHProjects_2TEM_2Pages_2CODE__OF__CONDUCT.html#autotoc_md5", null ],
+      [ "Enforcement Guidelines", "md__2home_2ihgd_2IHProjects_2TEM_2Pages_2CODE__OF__CONDUCT.html#autotoc_md6", [
+        [ "Correction", "md__2home_2ihgd_2IHProjects_2TEM_2Pages_2CODE__OF__CONDUCT.html#autotoc_md7", null ],
+        [ "Warning", "md__2home_2ihgd_2IHProjects_2TEM_2Pages_2CODE__OF__CONDUCT.html#autotoc_md8", null ],
+        [ "Temporary Ban", "md__2home_2ihgd_2IHProjects_2TEM_2Pages_2CODE__OF__CONDUCT.html#autotoc_md9", null ],
+        [ "Permanent Ban", "md__2home_2ihgd_2IHProjects_2TEM_2Pages_2CODE__OF__CONDUCT.html#autotoc_md10", null ]
       ] ],
-      [ "Contributing", "index.html#autotoc_md29", null ],
-      [ "Guidelines", "index.html#autotoc_md30", null ]
+      [ "Attribution", "md__2home_2ihgd_2IHProjects_2TEM_2Pages_2CODE__OF__CONDUCT.html#autotoc_md11", null ]
     ] ],
-    [ "Contributor Covenant Code of Conduct", "md_CODE__OF__CONDUCT.html", [
-      [ "Our Pledge", "md_CODE__OF__CONDUCT.html#autotoc_md1", null ],
-      [ "Our Standards", "md_CODE__OF__CONDUCT.html#autotoc_md2", null ],
-      [ "Enforcement Responsibilities", "md_CODE__OF__CONDUCT.html#autotoc_md3", null ],
-      [ "Scope", "md_CODE__OF__CONDUCT.html#autotoc_md4", null ],
-      [ "Enforcement", "md_CODE__OF__CONDUCT.html#autotoc_md5", null ],
-      [ "Enforcement Guidelines", "md_CODE__OF__CONDUCT.html#autotoc_md6", [
-        [ "Correction", "md_CODE__OF__CONDUCT.html#autotoc_md7", null ],
-        [ "Warning", "md_CODE__OF__CONDUCT.html#autotoc_md8", null ],
-        [ "Temporary Ban", "md_CODE__OF__CONDUCT.html#autotoc_md9", null ],
-        [ "Permanent Ban", "md_CODE__OF__CONDUCT.html#autotoc_md10", null ]
-      ] ],
-      [ "Attribution", "md_CODE__OF__CONDUCT.html#autotoc_md11", null ]
+    [ "Contributing to the Project", "md__2home_2ihgd_2IHProjects_2TEM_2Pages_2Contributing.html", [
+      [ "How to Contribute", "md__2home_2ihgd_2IHProjects_2TEM_2Pages_2Contributing.html#autotoc_md13", null ],
+      [ "Coding Standards", "md__2home_2ihgd_2IHProjects_2TEM_2Pages_2Contributing.html#autotoc_md14", null ],
+      [ "Commit standards", "md__2home_2ihgd_2IHProjects_2TEM_2Pages_2Contributing.html#autotoc_md15", null ],
+      [ "Test your changes", "md__2home_2ihgd_2IHProjects_2TEM_2Pages_2Contributing.html#autotoc_md16", null ],
+      [ "Reporting Issues", "md__2home_2ihgd_2IHProjects_2TEM_2Pages_2Contributing.html#autotoc_md17", null ],
+      [ "License", "md__2home_2ihgd_2IHProjects_2TEM_2Pages_2Contributing.html#autotoc_md18", null ],
+      [ "Contact Information", "md__2home_2ihgd_2IHProjects_2TEM_2Pages_2Contributing.html#autotoc_md19", null ]
     ] ],
-    [ "Contributing to the Project", "md_Contributing.html", [
-      [ "How to Contribute", "md_Contributing.html#autotoc_md13", null ],
-      [ "Coding Standards", "md_Contributing.html#autotoc_md14", null ],
-      [ "Commit standards", "md_Contributing.html#autotoc_md15", null ],
-      [ "Test your changes", "md_Contributing.html#autotoc_md16", null ],
-      [ "Reporting Issues", "md_Contributing.html#autotoc_md17", null ],
-      [ "License", "md_Contributing.html#autotoc_md18", null ],
-      [ "Contact Information", "md_Contributing.html#autotoc_md19", null ]
+    [ "Guidelines", "md__2home_2ihgd_2IHProjects_2TEM_2Pages_2Guidelines.html", [
+      [ "Table of contents:", "md__2home_2ihgd_2IHProjects_2TEM_2Pages_2Guidelines.html#autotoc_md21", null ],
+      [ "TEM implementing in project", "md__2home_2ihgd_2IHProjects_2TEM_2Pages_2Guidelines.html#autotoc_md22", null ],
+      [ "Standard specification", "md__2home_2ihgd_2IHProjects_2TEM_2Pages_2Guidelines.html#autotoc_md23", null ]
     ] ],
-    [ "Guidelines", "md_Guidelines.html", [
-      [ "Table of contents:", "md_Guidelines.html#autotoc_md21", null ],
-      [ "TEM implementing in project", "md_Guidelines.html#autotoc_md22", null ],
-      [ "Standard specification", "md_Guidelines.html#autotoc_md23", null ]
-    ] ],
-    [ "Security Policy", "md_Security.html", [
-      [ "Supported Versions", "md_Security.html#autotoc_md32", null ],
-      [ "Reporting a Vulnerability", "md_Security.html#autotoc_md33", null ]
+    [ "Security Policy", "md__2home_2ihgd_2IHProjects_2TEM_2Pages_2Security.html", [
+      [ "Supported Versions", "md__2home_2ihgd_2IHProjects_2TEM_2Pages_2Security.html#autotoc_md32", null ],
+      [ "Reporting a Vulnerability", "md__2home_2ihgd_2IHProjects_2TEM_2Pages_2Security.html#autotoc_md33", null ]
     ] ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
