@@ -28,6 +28,10 @@
   - [APIMacros](https://github.com/IHateGameDev/APIMacros), without use "APIMacros/override"
     - dlfcn.h / windows.h
 
+## Guidelines
+
+See the [Guidelines.md](./Guidelines.md) for implementing TEM in a project and standard specification for creating extensions.
+
 ## Build
 
 ### CMake options
@@ -38,7 +42,6 @@
 | BUILD_SHARED   | Add shared library to targets           | OFF               |
 | BUILD_EXAMPLES | Enable building examples                | OFF               |
 | EXAMPLES_USE   | Type of library use on compile examples | "Static"          |
-| BUILD_DOC      | Enable building doxygen doc             | OFF               |
 
 ### Build with CMake
 
@@ -68,7 +71,3 @@ make install
 ## Contributing
 
 If you want to contribute see [Contributing.md](./Contributing.md).
-
-## Guidelines
-
-See the [Guidelines.md](./Guidelines.md) for implementing TEM in a project and standard specification for creating extensions.

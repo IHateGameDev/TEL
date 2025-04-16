@@ -2,6 +2,7 @@
 
 ## Table of contents:
 - [Install Guide](#installGuide)
+- - [Summary](#installSummary)
 - [TEM Implementing in Project for Developers](#applicationsDevelopersGuide)
 - [Standard Specification for Extensions Developers](#extensionsDevelopersGuide)
 
@@ -71,8 +72,21 @@ make # or ninja
 make install # or ninja install
 ```
 
-You can configure the build options; see "CMake options" in [Readme.md](./Readme.md).<br>
+You can configure the build options; see [CMake options](#cmakeOptions).<br>
 These steps will install TEM on your PC.
+
+<a name="cmakeOptions"></a>
+
+### CMake options
+
+| **Option**     | **Description**                         | **Default value** |
+| :------------- | :-------------------------------------: | ----------------: |
+| BUILD_STATIC   | Add static library to targets           | ON                |
+| BUILD_SHARED   | Add shared library to targets           | OFF               |
+| BUILD_EXAMPLES | Enable building examples                | OFF               |
+| EXAMPLES_USE   | Type of library use on compile examples | "Static"          |
+
+<a name="installSummary"></a>
 
 ### Summary
 
@@ -115,7 +129,7 @@ You need to create a structure for your extension info:
 typedef void(ExampleUpdateFn*)(ExampleExtensionInfo*)
 
 typedef struct {
-  const char * name;
+  const char* name;
   ExampleUpdateFn update;
 } ExampleExtensionInfo;
 
@@ -176,7 +190,7 @@ int main() {
 This code loads the extension [extension.te](#extensionsDevelopersGuide), prints its name,<br>
 calls the `update` function 255 times, and calls the `cleanup` function to free `info->name`.
 
-NOTE: If you use the shared TEM library, don't forget to add compile flag: `-DAPI_SHARED_USE`.
+***NOTE***: If you use the shared TEM library, don't forget to add compile flag: `-DAPI_SHARED_USE`.
 
 <a name="extensionsDevelopersGuide"></a>
 
@@ -213,4 +227,4 @@ API/*optional but recommended*/ void cleanup(ExampleExtensionInfo* info) {
 }
 ```
 
-NOTE: Don't forget to add `-fPIC` and, if you use "APIMacros/api.h", also add `-DAPI_SHARED_BUILD`.
+***NOTE***: Don't forget to add `-fPIC` and, if you use "APIMacros/api.h", also add `-DAPI_SHARED_BUILD`.
