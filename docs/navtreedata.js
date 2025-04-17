@@ -25,7 +25,15 @@
 var NAVTREE =
 [
   [ "TEM", "index.html", [
-    [ "TEM - MainPage", "index.html", null ],
+    [ "TEM - create your extensible application", "index.html#autotoc_md31", [
+      [ "Features", "index.html#autotoc_md32", null ],
+      [ "Guidelines", "index.html#autotoc_md33", null ],
+      [ "Build", "index.html#autotoc_md34", [
+        [ "CMake options", "index.html#autotoc_md35", null ],
+        [ "Build with CMake", "index.html#autotoc_md36", null ]
+      ] ],
+      [ "Contributing", "index.html#autotoc_md37", null ]
+    ] ],
     [ "Contributor Covenant Code of Conduct", "md__2home_2ihgd_2IHProjects_2TEM_2Pages_2CODE__OF__CONDUCT.html", [
       [ "Our Pledge", "md__2home_2ihgd_2IHProjects_2TEM_2Pages_2CODE__OF__CONDUCT.html#autotoc_md1", null ],
       [ "Our Standards", "md__2home_2ihgd_2IHProjects_2TEM_2Pages_2CODE__OF__CONDUCT.html#autotoc_md2", null ],

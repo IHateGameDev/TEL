@@ -29,7 +29,7 @@ FULL_SIDEBAR           = NO
 
 DISABLE_INDEX          = NO
 
-USE_MDFILE_AS_MAINPAGE = MainPage.md
+USE_MDFILE_AS_MAINPAGE = ../Pages/Readme.md
 
 HTML_EXTRA_STYLESHEET  = Assets/doxygen-awesome.css \
                         Assets/doxygen-awesome-sidebar-only.css
