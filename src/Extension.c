@@ -1,41 +1,46 @@
-#include "../TEM/Extension.h"
+#include "../TEL/Extension.h"
 
 #include <APIMacros/shared.h>
 
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
-typedef void(*TEMCallback)(void*);
+typedef void (*TELCallback)(void *);
 
-static inline void processFunction(TEMExtension* extension, const char* functionName) {
-  TEMCallback callback = (TEMCallback)API_GET_LIB_FUNC((API_LIBRARY)extension->library, functionName);
+static inline void processFunction(TELExtension *extension,
+                                   const char *functionName) {
+  TELCallback callback = (TELCallback)API_GET_LIB_FUNC(
+      (API_LIBRARY)extension->library, functionName);
   if (!callback) {
-    printf("[TEM] Code of error on get function \"%s\": %s\n", functionName, API_GET_LIB_ERROR());
+    printf("[TEL] Code of error on get function \"%s\": %s\n", functionName,
+           API_GET_LIB_ERROR());
     return;
   }
 
   callback(extension->info);
 }
 
-API TEMExtension* temExtensionLoad(const char* path, const char* setupFunctionName, size_t infoSize) {
-  TEMExtension* out = malloc(sizeof(TEMExtension));
+API TELExtension *telExtensionLoad(const char *path,
+                                   const char *setupFunctionName,
+                                   size_t infoSize) {
+  TELExtension *out = malloc(sizeof(TELExtension));
 
   if (!out) {
-    puts("[TEM] Memory allocation for extension failed\n");
+    puts("[TEL] Memory allocation for extension failed\n");
     return nullptr;
   }
 
-  out->library = (void*)API_LOAD_LIBRARY(path);
+  out->library = (void *)API_LOAD_LIBRARY(path);
 
   if (!out->library) {
-    printf("[TEM] Code of error on extension load: %s\n", API_GET_LIB_ERROR());
+    printf("[TEL] Code of error on extension load: %s\n", API_GET_LIB_ERROR());
     free(out);
     return nullptr;
   }
-  
+
   out->info = malloc(infoSize);
   if (!out->info) {
-    puts("[TEM] Memory allocation for extension info failed\n");
+    puts("[TEL] Memory allocation for extension info failed\n");
     return nullptr;
   }
 
@@ -43,10 +48,11 @@ API TEMExtension* temExtensionLoad(const char* path, const char* setupFunctionNa
   return out;
 }
 
-API void temExtensionUnload(TEMExtension* self, const char* cleanupFunctionName) {
+API void telExtensionUnload(TELExtension *self,
+                            const char *cleanupFunctionName) {
   if (*cleanupFunctionName != '\0')
     processFunction(self, cleanupFunctionName);
-  
+
   free(self->info);
   API_UNLOAD_LIBRARY((API_LIBRARY)self->library);
 

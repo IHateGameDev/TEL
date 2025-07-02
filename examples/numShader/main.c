@@ -1,9 +1,9 @@
 #include "ExtensionInfo.h"
-#include <TEM/Extension.h>
+#include <TEL/Extension.h>
 #include <stdio.h>
 
 int main(void) {
-  TEMExtension* extension = temExtensionLoad("./extensions/random.te", "setup", sizeof(NumShaderExtensionInfo));
+  TELExtension* extension = telExtensionLoad("./extensions/random.te", "setup", sizeof(NumShaderExtensionInfo));
   long long num = 32'000;
 
   for (unsigned char i = 0; i < 10; i++) {
@@ -11,6 +11,6 @@ int main(void) {
     printf("Number after use shader: %lld\n", num);
   }
 
-  temExtensionUnload(extension, "");
+  telExtensionUnload(extension, "");
   return 0;
 }

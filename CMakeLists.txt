@@ -1,12 +1,12 @@
 cmake_minimum_required(VERSION 3.10)
-project(TEM)
+project(TEL)
 
 ###### OPTIONS SECTION ######
 
 option(BUILD_SHARED   "Build shared library"  OFF)
 option(BUILD_EXAMPLES "Build examples"        OFF)
 option(BUILD_STATIC   "Build static library"  ON)
-option(EXAMPLES_USE   "Library type of tem"   "Static")
+option(EXAMPLES_USE   "Library type of tel"   "Static")
 
 ###### SETUP C SECTION ######
 
@@ -28,32 +28,32 @@ endif()
 
 ###### LIBRARY SECTION ######
 
-file(GLOB temSources
+file(GLOB telSources
   ${CMAKE_SOURCE_DIR}/src/*.c
 )
 
 if(BUILD_SHARED)
-  add_library(tem-shared SHARED ${temSources})
+  add_library(tel-shared SHARED ${telSources})
 endif()
 
 if(BUILD_STATIC)
-  add_library(tem-static STATIC ${temSources})
+  add_library(tel-static STATIC ${telSources})
 endif()
 
 if(EXAMPLES_USE STREQUAL "Shared")
-  set(tem tem-shared)
+  set(tel tel-shared)
 elseif(EXAMPLES_USE STREQUAL "Static")
-  set(tem tem-static)
+  set(tel tel-static)
 else()
   set(EXAMPLES_USE "Static")
   message(STATUS "EXAMPLES_USE not set currently, defaulting to \"Static\"")
-  set(tem tem-static)
+  set(tel tel-static)
 endif()
 
 ###### INSTALL SECTION ######
 
-install(TARGETS ${tem} DESTINATION lib)
-install(DIRECTORY ${CMAKE_SOURCE_DIR}/TEM DESTINATION include)
+install(TARGETS ${tel} DESTINATION lib)
+install(DIRECTORY ${CMAKE_SOURCE_DIR}/TEL DESTINATION include)
 
 ###### EXAMPLES SECTION ######
 

@@ -3,7 +3,7 @@
 ## Table of contents:
 - [Install Guide](#installGuide)
 - - [Summary](#installSummary)
-- [TEM Implementing in Project for Developers](#applicationsDevelopersGuide)
+- [TEL Implementing in Project for Developers](#applicationsDevelopersGuide)
 - [Standard Specification for Extensions Developers](#extensionsDevelopersGuide)
 
 <a name="installGuide"></a>
@@ -14,7 +14,7 @@
 
 ### Install APIMacros
 
-Before building TEM, you need to download or get [APIMacros](https://github.com/IHateGameDev/APIMacros).
+Before building TEL, you need to download or get [APIMacros](https://github.com/IHateGameDev/APIMacros).
 
 Download and install(NOT RECOMMENDED):
 
@@ -33,7 +33,7 @@ sudo make install
 ```
 
 Get only the needed dependencies(RECOMMENDED):<br>
-[Download TEM](#downloadTEM) and write this in terminal:
+[Download TEL](#downloadTEL) and write this in terminal:
 
 ```bash
 mkdir APIMacros
@@ -46,21 +46,21 @@ cd ..
 
 You have successfully obtained APIMacros!
 
-<a name="downloadTEM"></a>
+<a name="downloadTEL"></a>
 
-### Download TEM
+### Download TEL
 
-To download TEM, run the following commands in the terminal:
+To download TEL, run the following commands in the terminal:
 
 ```bash
-git clone https://github.com/IHateGameDev/TEM.git
-cd TEM
+git clone https://github.com/IHateGameDev/TEL.git
+cd TEL
 ```
 
-### Build and Install TEM
+### Build and Install TEL
 
-Before building, you need [install APIMacros](#installAPIMacros) and [download TEM](#downloadTEM).<br>
-To build TEM, run the following commands in the terminal:
+Before building, you need [install APIMacros](#installAPIMacros) and [download TEL](#downloadTEL).<br>
+To build TEL, run the following commands in the terminal:
 
 ```bash
 mkdir build
@@ -73,7 +73,7 @@ make install # or ninja install
 ```
 
 You can configure the build options; see [CMake options](#cmakeOptions).<br>
-These steps will install TEM on your PC.
+These steps will install TEL on your PC.
 
 <a name="cmakeOptions"></a>
 
@@ -92,8 +92,8 @@ These steps will install TEM on your PC.
 
 Example commands in the terminal:
 ```bash
-git clone https://github.com/IHateGameDev/TEM.git
-cd TEM
+git clone https://github.com/IHateGameDev/TEL.git
+cd TEL
 
 mkdir APIMacros
 cd APIMacros
@@ -113,9 +113,9 @@ ninja install
 
 <a name="applicationsDevelopersGuide"></a>
 
-## TEM Implementing in project
+## TEL Implementing in project
 
-If you want to implementing TEM in your project:
+If you want to implementing TEL in your project:
 
 ### Extension info
 
@@ -160,19 +160,19 @@ char* ExampleNewString(const char* restrict src) {
   char* out = malloc(strlen(src) + 1);
   strcpy(out, src);
   return out;
-}
+} // strdup
 ```
 
 And construct you application source file:
 ```c
 #include "ExtensionInfo.h"
-#include <TEM/Extension.h>
+#include <TEL/Extension.h>
 #include <stdio.h>
 
 int main() {
   puts("Hello from my application!\n");
   
-  TEMExtension* extension = temExtensionLoad("./extension.te", "setup"/* setup function name */, sizeof(ExampleExtensionInfo));
+  TELExtension* extension = telExtensionLoad("./extension.te", "setup"/* setup function name */, sizeof(ExampleExtensionInfo));
 
   ExampleExtensionInfo* info = (ExampleExtensionInfo*)extension->info;
 
@@ -183,14 +183,14 @@ int main() {
   for (unsigned char i = 0; i < 255; i++)
     info->update();
 
-  temExtensionUnload(extension, "cleanup"/* cleanup function name '\0' or "" for not using cleanup function */);
+  telExtensionUnload(extension, "cleanup"/* cleanup function name '\0' or "" for not using cleanup function */);
 }
 ```
 
 This code loads the extension [extension.te](#extensionsDevelopersGuide), prints its name,<br>
 calls the `update` function 255 times, and calls the `cleanup` function to free `info->name`.
 
-***NOTE***: If you use the shared TEM library, don't forget to add compile flag: `-DAPI_SHARED_USE`.
+***NOTE***: If you use the shared TEL library, don't forget to add compile flag: `-DAPI_SHARED_USE`.
 
 <a name="extensionsDevelopersGuide"></a>
 
@@ -221,10 +221,10 @@ API/*optional but recommended*/ void setup(ExampleExtensionInfo* info) {
   info->update = someUpdate;
 }
 
-//Add the cleanup function to free allocated memory:
+// Add the cleanup function to free allocated memory:
 API/*optional but recommended*/ void cleanup(ExampleExtensionInfo* info) {
   free(info->name);
 }
 ```
 
-***NOTE***: Don't forget to add `-fPIC` and, if you use "APIMacros/api.h", also add `-DAPI_SHARED_BUILD`.
+***NOTE*** Don't forget to add `-fPIC` and, if you use "APIMacros/api.h", also add `-DAPI_SHARED_BUILD`.
