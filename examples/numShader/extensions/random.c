@@ -2,9 +2,7 @@
 #include <APIMacros/api.h>
 #include <stdio.h>
 
-void shader(long long* num) {
-  *num = (*num * 3) + 87230124672ULL;
-}
+void shader(long long* num) { *num = (*num * 3) + 87230124672ULL; }
 
 API void setup(NumShaderExtensionInfo* info) {
   info->shader = shader;

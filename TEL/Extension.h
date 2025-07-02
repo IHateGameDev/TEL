@@ -19,10 +19,10 @@
  * @brief The structure that represents the extension.
  */
 typedef struct {
-  void *info; /**< Pointer to a custom structure representing information about
+  void* info; /**< Pointer to a custom structure representing information about
                  the extension (the structure is provided by the program
                  developer). */
-  void *library; /**< Pointer to a shared library representing the extension. */
+  void* library; /**< Pointer to a shared library representing the extension. */
 } TELExtension;
 
 /**
@@ -40,8 +40,8 @@ typedef struct {
  *
  * @return Pointer to TELExtension
  */
-API TELExtension *telExtensionLoad(const char *restrict path,
-                                   const char *restrict setupFunctionName,
+API TELExtension* telExtensionLoad(const char* restrict path,
+                                   const char* restrict setupFunctionName,
                                    size_t infoSize);
 
 /**
@@ -56,7 +56,7 @@ API TELExtension *telExtensionLoad(const char *restrict path,
  * (requires the information parameter in the cleanup function of the
  * extension).
  */
-API void telExtensionUnload(TELExtension *self,
-                            const char *restrict cleanupFunctionName);
+API void telExtensionUnload(TELExtension* self,
+                            const char* restrict cleanupFunctionName);
 
 #endif // !TEL_EXTENSION_H

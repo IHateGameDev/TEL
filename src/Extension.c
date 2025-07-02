@@ -5,10 +5,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef void (*TELCallback)(void *);
+typedef void (*TELCallback)(void*);
 
-static inline void processFunction(TELExtension *extension,
-                                   const char *functionName) {
+static inline void processFunction(TELExtension* extension,
+                                   const char* functionName) {
   TELCallback callback = (TELCallback)API_GET_LIB_FUNC(
       (API_LIBRARY)extension->library, functionName);
   if (!callback) {
@@ -20,17 +20,17 @@ static inline void processFunction(TELExtension *extension,
   callback(extension->info);
 }
 
-API TELExtension *telExtensionLoad(const char *path,
-                                   const char *setupFunctionName,
+API TELExtension* telExtensionLoad(const char* path,
+                                   const char* setupFunctionName,
                                    size_t infoSize) {
-  TELExtension *out = malloc(sizeof(TELExtension));
+  TELExtension* out = malloc(sizeof(TELExtension));
 
   if (!out) {
     puts("[TEL] Memory allocation for extension failed\n");
     return nullptr;
   }
 
-  out->library = (void *)API_LOAD_LIBRARY(path);
+  out->library = (void*)API_LOAD_LIBRARY(path);
 
   if (!out->library) {
     printf("[TEL] Code of error on extension load: %s\n", API_GET_LIB_ERROR());
@@ -48,8 +48,8 @@ API TELExtension *telExtensionLoad(const char *path,
   return out;
 }
 
-API void telExtensionUnload(TELExtension *self,
-                            const char *cleanupFunctionName) {
+API void telExtensionUnload(TELExtension* self,
+                            const char* cleanupFunctionName) {
   if (*cleanupFunctionName != '\0')
     processFunction(self, cleanupFunctionName);
 
