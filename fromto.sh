@@ -18,7 +18,7 @@ if ! git checkout "$dstBranch"; then
   exit 1
 fi
 
-if ! git restore --source "$srcBranch" -- fromto.sh fromto.ps1 fromto.sh License TEM; then
+if ! git restore --source "$srcBranch" -- fromto.sh fromto.ps1 fromto.sh License TEL; then
   echo "Error copying files."
   exit 1
 fi
@@ -47,4 +47,3 @@ fi
 echo "Don't forget to add and commit changes, and build docs if needed!"
 
 exit 0
-

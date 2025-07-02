@@ -21,7 +21,7 @@ try {
 }
 
 try {
-  git restore --source $srcBranch -- fromto.ps1 fromto.sh License TEM
+  git restore --source $srcBranch -- fromto.ps1 fromto.sh License TEL
 
   if ($srcBranch -eq "docs") {
     git restore --source $srcBranch -- Pages
