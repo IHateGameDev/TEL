@@ -5,7 +5,7 @@ Thank you for considering contributing to our project! We appreciate your help.
 ## How to Contribute
 
 1. Fork the repository.
-2. Clone the repository: `git clone https://github.com/YourName/TEM.git`.
+2. Clone the repository: `git clone https://github.com/YourName/TEL.git`.
 3. Create a new branch: `git checkout -b branch-name`.
 4. Make your changes and commit them: `git add . && git commit -m "Add: feature"`.
 5. Push changes in your repository: `git push origin branch-name`.
