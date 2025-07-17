@@ -3,8 +3,9 @@
 #include <stdio.h>
 
 int main(void) {
-  TELExtension* extension = telExtensionLoad(
-      "./extensions/printHello.te", "setup", sizeof(BaseExtensionInfo));
+  TEL_NEW_EXTENSION(extension, BaseExtensionInfo);
+
+  telExtensionLoad(extension, "./extensions/printHello.te", "setup");
 
   BaseExtensionInfo* info = (BaseExtensionInfo*)extension->info;
 

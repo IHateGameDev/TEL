@@ -19,6 +19,7 @@
 
 #include <APIMacros/api.h>
 #include <stddef.h>
+#include <stdlib.h>
 
 /**
  * @brief The structure that represents the error on return.
