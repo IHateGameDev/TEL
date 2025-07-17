@@ -7,7 +7,7 @@ We support only latest stable version and versions in table, but if you have a q
 | Version  | Supported          |
 | -------- | ------------------ |
 | latest   | :white_check_mark: |
-| >= 0.1.0 | :white_check_mark: |
+| >= 0.1.x | :white_check_mark: |
 
 ## Reporting a Vulnerability
 

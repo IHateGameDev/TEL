@@ -1,60 +1,52 @@
+/*
+ * Use MIT License
+ * Copyright (c) 2025 semenovihandrei
+ */
+
 #include "../TEL/Extension.h"
 
+#include <APIMacros/nullptr.h>
 #include <APIMacros/shared.h>
 
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef void (*TELCallback)(void*);
+typedef void (*TelCallback)(void*);
 
-static inline void processFunction(TELExtension* extension,
-                                   const char* functionName) {
-  TELCallback callback = (TELCallback)API_GET_LIB_FUNC(
-      (API_LIBRARY)extension->library, functionName);
+static inline TelError processFunction(TelExtension* extension,
+                                       const char* functionName) {
+  TelCallback callback =
+      (TelCallback)GET_LIB_FUNC((LIBRARY)extension->library, functionName);
+
   if (!callback) {
-    printf("[TEL] Code of error on get function \"%s\": %s\n", functionName,
-           API_GET_LIB_ERROR());
-    return;
+    return (TelError){TEL_ERROR_GET_FUNC, GET_LIB_ERROR()};
   }
 
   callback(extension->info);
+  return (TelError){TEL_ERROR_NO, NULLPTR};
 }
 
-API TELExtension* telExtensionLoad(const char* path,
-                                   const char* setupFunctionName,
-                                   size_t infoSize) {
-  TELExtension* out = malloc(sizeof(TELExtension));
+API TelError telExtensionLoad(TelExtension* self, const char* path,
+                              const char* setupFunctionName) {
+  self->library = (void*)LOAD_LIBRARY(path);
 
-  if (!out) {
-    puts("[TEL] Memory allocation for extension failed\n");
-    return nullptr;
+  if (!self->library) {
+    free(self);
+    return (TelError){TEL_ERROR_EXT_LOAD, GET_LIB_ERROR()};
   }
 
-  out->library = (void*)API_LOAD_LIBRARY(path);
-
-  if (!out->library) {
-    printf("[TEL] Code of error on extension load: %s\n", API_GET_LIB_ERROR());
-    free(out);
-    return nullptr;
-  }
-
-  out->info = malloc(infoSize);
-  if (!out->info) {
-    puts("[TEL] Memory allocation for extension info failed\n");
-    return nullptr;
-  }
-
-  processFunction(out, setupFunctionName);
-  return out;
+  return processFunction(self, setupFunctionName);
 }
 
-API void telExtensionUnload(TELExtension* self,
-                            const char* cleanupFunctionName) {
-  if (*cleanupFunctionName != '\0')
-    processFunction(self, cleanupFunctionName);
+API TelError telExtensionUnload(TelExtension* self,
+                                const char* cleanupFunctionName) {
+  if (*cleanupFunctionName != '\0' && !cleanupFunctionName)
+    return processFunction(self, cleanupFunctionName);
 
   free(self->info);
-  API_UNLOAD_LIBRARY((API_LIBRARY)self->library);
+  UNLOAD_LIBRARY((LIBRARY)self->library);
 
   free(self);
+
+  return (TelError){TEL_ERROR_NO, GET_LIB_ERROR()};
 }
