@@ -8,7 +8,6 @@
 #include <APIMacros/nullptr.h>
 #include <APIMacros/shared.h>
 
-#include <stdio.h>
 #include <stdlib.h>
 
 typedef void (*TelCallback)(void*);
