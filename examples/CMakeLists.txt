@@ -10,7 +10,7 @@ function(compileApp)
     target_compile_options(${appName} PRIVATE "-DAPI_SHARED_USE")
   endif()
 
-  target_link_libraries(${appName} ${tem})
+  target_link_libraries(${appName} ${tel})
 
   add_subdirectory(extensions)
 endfunction()
