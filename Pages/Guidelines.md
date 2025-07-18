@@ -16,7 +16,7 @@
 
 Before building TEL, you need to download or get [APIMacros](https://github.com/IHateGameDev/APIMacros).
 
-Download and install(NOT RECOMMENDED):
+Download and install:
 
 ```bash
 git clone https://github.com/IHateGameDev/APIMacros.git
@@ -32,15 +32,17 @@ sudo make install
 # ninja install
 ```
 
-Get only the needed dependencies(RECOMMENDED):<br>
+Get only the needed dependencies:<br>
 [Download TEL](#downloadTEL) and write this in terminal:
 
 ```bash
 mkdir APIMacros
 cd APIMacros
+
 # Downloading
 wget https://raw.githubusercontent.com/IHateGameDev/APIMacros/main/APIMacros/api.h
 wget https://raw.githubusercontent.com/IHateGameDev/APIMacros/main/APIMacros/shared.h
+wget https://raw.githubusercontent.com/IHateGameDev/APIMacros/main/APIMacros/nullptr.h
 cd ..
 ```
 
@@ -100,6 +102,7 @@ cd APIMacros
 
 wget https://raw.githubusercontent.com/IHateGameDev/APIMacros/main/APIMacros/api.h
 wget https://raw.githubusercontent.com/IHateGameDev/APIMacros/main/APIMacros/shared.h
+wget https://raw.githubusercontent.com/IHateGameDev/APIMacros/main/APIMacros/nullptr.h
 
 cd ..
 mkdir build
@@ -172,7 +175,8 @@ And construct you application source file:
 int main() {
   puts("Hello from my application!\n");
   
-  TELExtension* extension = telExtensionLoad("./extension.te", "setup"/* setup function name */, sizeof(ExampleExtensionInfo));
+  TEL_NEW_EXTENSION(extension, ExampleExtensionInfo);
+  telExtensionLoad(extension, "./extension.te", "setup"/* setup function name */);
 
   ExampleExtensionInfo* info = (ExampleExtensionInfo*)extension->info;
 
@@ -183,7 +187,7 @@ int main() {
   for (unsigned char i = 0; i < 255; i++)
     info->update();
 
-  telExtensionUnload(extension, "cleanup"/* cleanup function name '\0' or "" for not using cleanup function */);
+  telExtensionUnload(extension, "cleanup"/* cleanup function name '\0' / "" / 0 / nullptr for not using cleanup function */);
 }
 ```
 
