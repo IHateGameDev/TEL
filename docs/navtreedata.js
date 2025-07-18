@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "TEM", "index.html", [
+  [ "TEL", "index.html", [
     [ "TEL - create your extensible application", "index.html#autotoc_md31", [
       [ "Features", "index.html#autotoc_md32", null ],
       [ "Guidelines", "index.html#autotoc_md33", null ],
@@ -74,13 +74,29 @@ var NAVTREE =
     [ "Security Policy", "md__2home_2ihgd_2IHProjects_2TEL_2Pages_2Security.html", [
       [ "Supported Versions", "md__2home_2ihgd_2IHProjects_2TEL_2Pages_2Security.html#autotoc_md39", null ],
       [ "Reporting a Vulnerability", "md__2home_2ihgd_2IHProjects_2TEL_2Pages_2Security.html#autotoc_md40", null ]
+    ] ],
+    [ "Data Structures", "annotated.html", [
+      [ "Data Structures", "annotated.html", "annotated_dup" ],
+      [ "Data Structure Index", "classes.html", null ],
+      [ "Data Fields", "functions.html", [
+        [ "All", "functions.html", null ],
+        [ "Variables", "functions_vars.html", null ]
+      ] ]
+    ] ],
+    [ "Files", "files.html", [
+      [ "File List", "files.html", "files_dup" ],
+      [ "Globals", "globals.html", [
+        [ "All", "globals.html", null ],
+        [ "Functions", "globals_func.html", null ],
+        [ "Macros", "globals_defs.html", null ]
+      ] ]
     ] ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"index.html"
+"Extension_8h.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

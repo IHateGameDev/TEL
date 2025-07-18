@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TEM: Guidelines</title>
+<title>TEL: Guidelines</title>
 <link rel="icon" href="Icon.webp" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -29,7 +29,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="Logo.webp"/></td>
   <td id="projectalign">
-   <div id="projectname">TEM
+   <div id="projectname">TEL
    </div>
    <div id="projectbrief">Create your extensible application</div>
   </td>
@@ -231,14 +231,14 @@ Extension info</h2>
 <div class="line">  <span class="keywordflow">return</span> out;</div>
 <div class="line">} <span class="comment">// strdup</span></div>
 </div><!-- fragment --><p>And construct you application source file: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;ExtensionInfo.h&quot;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;TEL/Extension.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="Extension_8h.html">TEL/Extension.h</a>&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main() {</div>
 <div class="line">  puts(<span class="stringliteral">&quot;Hello from my application!\n&quot;</span>);</div>
 <div class="line">  </div>
-<div class="line">  TEL_NEW_EXTENSION(extension, ExampleExtensionInfo);</div>
-<div class="line">  telExtensionLoad(extension, <span class="stringliteral">&quot;./extension.te&quot;</span>, <span class="stringliteral">&quot;setup&quot;</span><span class="comment">/* setup function name */</span>);</div>
+<div class="line">  <a class="code hl_define" href="Extension_8h.html#ab3e8971d9a34ecb71fa7b0ff824e894e">TEL_NEW_EXTENSION</a>(extension, ExampleExtensionInfo);</div>
+<div class="line">  <a class="code hl_function" href="Extension_8h.html#a0ad35cf5f0f846cdbd54faceb83aee02">telExtensionLoad</a>(extension, <span class="stringliteral">&quot;./extension.te&quot;</span>, <span class="stringliteral">&quot;setup&quot;</span><span class="comment">/* setup function name */</span>);</div>
 <div class="line"> </div>
 <div class="line">  ExampleExtensionInfo* info = (ExampleExtensionInfo*)extension-&gt;info;</div>
 <div class="line"> </div>
@@ -249,8 +249,12 @@ Extension info</h2>
 <div class="line">  <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> i = 0; i &lt; 255; i++)</div>
 <div class="line">    info-&gt;update();</div>
 <div class="line"> </div>
-<div class="line">  telExtensionUnload(extension, <span class="stringliteral">&quot;cleanup&quot;</span><span class="comment">/* cleanup function name &#39;\0&#39; / &quot;&quot; / 0 / nullptr for not using cleanup function */</span>);</div>
+<div class="line">  <a class="code hl_function" href="Extension_8h.html#a514b6960ca2863710ee685c59bf90f3a">telExtensionUnload</a>(extension, <span class="stringliteral">&quot;cleanup&quot;</span><span class="comment">/* cleanup function name &#39;\0&#39; / &quot;&quot; / 0 / nullptr for not using cleanup function */</span>);</div>
 <div class="line">}</div>
+<div class="ttc" id="aExtension_8h_html"><div class="ttname"><a href="Extension_8h.html">Extension.h</a></div><div class="ttdoc">Add extension structure and functions.</div></div>
+<div class="ttc" id="aExtension_8h_html_a0ad35cf5f0f846cdbd54faceb83aee02"><div class="ttname"><a href="Extension_8h.html#a0ad35cf5f0f846cdbd54faceb83aee02">telExtensionLoad</a></div><div class="ttdeci">API TelError telExtensionLoad(TelExtension *self, const char *restrict path, const char *restrict setupFunctionName)</div><div class="ttdoc">Function that loads the extension.</div></div>
+<div class="ttc" id="aExtension_8h_html_a514b6960ca2863710ee685c59bf90f3a"><div class="ttname"><a href="Extension_8h.html#a514b6960ca2863710ee685c59bf90f3a">telExtensionUnload</a></div><div class="ttdeci">API TelError telExtensionUnload(TelExtension *self, const char *restrict cleanupFunctionName)</div><div class="ttdoc">Function that unload the extension.</div></div>
+<div class="ttc" id="aExtension_8h_html_ab3e8971d9a34ecb71fa7b0ff824e894e"><div class="ttname"><a href="Extension_8h.html#ab3e8971d9a34ecb71fa7b0ff824e894e">TEL_NEW_EXTENSION</a></div><div class="ttdeci">#define TEL_NEW_EXTENSION(extension, struct)</div><div class="ttdoc">Macro that create TelExtension.</div><div class="ttdef"><b>Definition</b> Extension.h:59</div></div>
 </div><!-- fragment --><p>This code loads the extension <a class="el" href="#extensionsDevelopersGuide">extension.te</a>, prints its name,<br  />
  calls the <span class="tt">update</span> function 255 times, and calls the <span class="tt">cleanup</span> function to free <span class="tt">info-&gt;name</span>.</p>
 <p><em><b>NOTE</b></em>: If you use the shared TEL library, don't forget to add compile flag: <span class="tt">-DAPI_SHARED_USE</span>.</p>

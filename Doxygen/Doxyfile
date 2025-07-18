@@ -1,6 +1,6 @@
 # Doxyfile 1.13.2
 
-PROJECT_NAME           = "TEM"
+PROJECT_NAME           = "TEL"
 PROJECT_BRIEF          = "Create your extensible application"
 PROJECT_LOGO           = Assets/Logo.webp
 PROJECT_ICON           = Assets/Icon.webp
@@ -14,7 +14,7 @@ OPTIMIZE_OUTPUT_FOR_C  = YES
 
 MARKDOWN_SUPPORT       = YES
 
-INPUT                  = ../TEM/ \
+INPUT                  = ../TEL/ \
                         ../Pages/ \
                         Assets/ \
                         ./
@@ -31,6 +31,4 @@ DISABLE_INDEX          = NO
 
 USE_MDFILE_AS_MAINPAGE = ../Pages/Readme.md
 
-HTML_EXTRA_STYLESHEET  = Assets/doxygen-awesome.css \
-                        Assets/doxygen-awesome-sidebar-only.css
-
+HTML_EXTRA_STYLESHEET  = Assets/doxygen-awesome.css

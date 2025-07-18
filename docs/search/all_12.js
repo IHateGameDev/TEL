@@ -1,13 +1,25 @@
 var searchData=
 [
   ['table_20of_20contents_3a_0',['Table of contents:',['../md__2home_2ihgd_2IHProjects_2TEL_2Pages_2Guidelines.html#autotoc_md21',1,'']]],
-  ['tel_1',['TEL',['../md__2home_2ihgd_2IHProjects_2TEL_2Pages_2Guidelines.html#autotoc_md25',1,'Build and Install TEL'],['../md__2home_2ihgd_2IHProjects_2TEL_2Pages_2Guidelines.html#autotoc_md24',1,'Download TEL']]],
+  ['tel_1',['TEL',['../md__2home_2ihgd_2IHProjects_2TEL_2Pages_2Guidelines.html#autotoc_md25',1,'Build and Install TEL'],['../md__2home_2ihgd_2IHProjects_2TEL_2Pages_2Guidelines.html#autotoc_md24',1,'Download TEL'],['../index.html',1,'TEL']]],
   ['tel_20create_20your_20extensible_20application_2',['TEL - create your extensible application',['../index.html#autotoc_md31',1,'']]],
   ['tel_20implementing_20in_20project_3',['TEL Implementing in project',['../md__2home_2ihgd_2IHProjects_2TEL_2Pages_2Guidelines.html#autotoc_md28',1,'']]],
-  ['tem_4',['TEM',['../index.html',1,'']]],
-  ['temporary_20ban_5',['3. Temporary Ban',['../md__2home_2ihgd_2IHProjects_2TEL_2Pages_2CODE__OF__CONDUCT.html#autotoc_md9',1,'']]],
-  ['test_20your_20changes_6',['Test your changes',['../md__2home_2ihgd_2IHProjects_2TEL_2Pages_2Contributing.html#autotoc_md16',1,'']]],
-  ['the_20project_7',['Contributing to the Project',['../md__2home_2ihgd_2IHProjects_2TEL_2Pages_2Contributing.html',1,'']]],
-  ['to_20contribute_8',['How to Contribute',['../md__2home_2ihgd_2IHProjects_2TEL_2Pages_2Contributing.html#autotoc_md13',1,'']]],
-  ['to_20the_20project_9',['Contributing to the Project',['../md__2home_2ihgd_2IHProjects_2TEL_2Pages_2Contributing.html',1,'']]]
+  ['tel_5ferror_5fext_5fload_4',['TEL_ERROR_EXT_LOAD',['../Extension_8h.html#a74ad67beab2dea3bb4b7c67d51cfa5ae',1,'Extension.h']]],
+  ['tel_5ferror_5fget_5ffunc_5',['TEL_ERROR_GET_FUNC',['../Extension_8h.html#aaef5129c74aa54d4cc939b295cedf53d',1,'Extension.h']]],
+  ['tel_5ferror_5fno_6',['TEL_ERROR_NO',['../Extension_8h.html#a2e68d1004eef08bc8221af4237b65554',1,'Extension.h']]],
+  ['tel_5fnew_5fextension_7',['TEL_NEW_EXTENSION',['../Extension_8h.html#ab3e8971d9a34ecb71fa7b0ff824e894e',1,'Extension.h']]],
+  ['tel_5fversion_8',['TEL_VERSION',['../Version_8h.html#a69430fee2b314b002260c50e4423dd3a',1,'Version.h']]],
+  ['tel_5fversion_5fmajor_9',['TEL_VERSION_MAJOR',['../Version_8h.html#a81ca45cd9d2764644b028be9609e6c24',1,'Version.h']]],
+  ['tel_5fversion_5fminor_10',['TEL_VERSION_MINOR',['../Version_8h.html#acf8fe9e615c2ef669730678e90d2e097',1,'Version.h']]],
+  ['tel_5fversion_5fpatch_11',['TEL_VERSION_PATCH',['../Version_8h.html#af4eff342c374a09cb8962ea96cd6a390',1,'Version.h']]],
+  ['tel_5fversion_5fprefix_12',['TEL_VERSION_PREFIX',['../Version_8h.html#ac822f17fc629c6bc2fcfbce099c563a1',1,'Version.h']]],
+  ['telerror_13',['TelError',['../structTelError.html',1,'']]],
+  ['telextension_14',['TelExtension',['../structTelExtension.html',1,'']]],
+  ['telextensionload_15',['telExtensionLoad',['../Extension_8h.html#a0ad35cf5f0f846cdbd54faceb83aee02',1,'Extension.h']]],
+  ['telextensionunload_16',['telExtensionUnload',['../Extension_8h.html#a514b6960ca2863710ee685c59bf90f3a',1,'Extension.h']]],
+  ['temporary_20ban_17',['3. Temporary Ban',['../md__2home_2ihgd_2IHProjects_2TEL_2Pages_2CODE__OF__CONDUCT.html#autotoc_md9',1,'']]],
+  ['test_20your_20changes_18',['Test your changes',['../md__2home_2ihgd_2IHProjects_2TEL_2Pages_2Contributing.html#autotoc_md16',1,'']]],
+  ['the_20project_19',['Contributing to the Project',['../md__2home_2ihgd_2IHProjects_2TEL_2Pages_2Contributing.html',1,'']]],
+  ['to_20contribute_20',['How to Contribute',['../md__2home_2ihgd_2IHProjects_2TEL_2Pages_2Contributing.html#autotoc_md13',1,'']]],
+  ['to_20the_20project_21',['Contributing to the Project',['../md__2home_2ihgd_2IHProjects_2TEL_2Pages_2Contributing.html',1,'']]]
 ];
