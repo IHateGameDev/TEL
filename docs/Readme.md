@@ -25,7 +25,7 @@
 - Easy and tiny API
 - Few depends:
   - libc
-  - [APIMacros](https://github.com/IHateGameDev/APIMacros), without use "APIMacros/override"
+  - [APIMacros](https://github.com/IHateGameDev/APIMacros)
     - dlfcn.h / windows.h
 
 ## Guidelines
