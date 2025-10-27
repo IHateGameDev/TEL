@@ -1,5 +1,7 @@
 <div align="center">
 
+# Due to the lack of knowledge and understanding of what I am doing during the creation of the project, I archive the project if there is a need for simple modding/extensibility, see APIMacros/shared.h
+
 # TEL - create your extensible application
 
 </div>
